@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <script>
+
+        const date1 = new Date() // Pega data e hora atual
+        const date2 = new Date(1995, 5, 18, 3, 0, 0) // inicializando uma data com dados
+        const date3 = new Date("Feb 19 1990 03:30:00") // iniciando uma data com uma string
+        const date4 = new Date("1982-02-18T09:00:00.000z") // formato ISO
+
+        console.log(date1)
+        console.log(date2)
+        console.log(date3)
+        console.log(date4)
+
+        console.log(date1.toISOString()) // retorna a data em formato ISO
+
+        console.log("dia", date2.getDate())
+        console.log("mes", date2.getMonth() + 1) // como ele inicia a contagem do 0, pra mostrar o mes certo tem que acrescer 1
+        console.log("ano", date2.getFullYear())
+        console.log(date2.getDay()) // vai retornar de 0 à 6 , onde 0 é domingo e 6 é sábado
+
+        // calculando a idade
+        console.log("idade", date1.getFullYear() - date2.getFullYear())
+    </script>
+</html>

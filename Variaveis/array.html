@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8" /> 
+    </head>
+    <script>
+        const person1 = "Felipe"
+        const person2 = "Ana"
+        const person3 = "Paulo"
+
+        console.log(person1)
+        console.log(person2)
+        console.log(person3)
+        // Nesse modelo, se tiver mil pessoas vai ter que criar mil variáveis
+
+        //com array
+        const persons = ["Felipe", "Ana", "Paulo"]
+        // variável         0       1       2        - sempre conta a lista da esquerda para a direita e começando sempre do 0
+        console.log(persons[0])
+        console.log(persons[1])
+        console.log(persons[2])
+
+        //pode adicionar um elemento na lista msm depois dela criada, mas não é uma boa prática
+        persons[3] = "Matheus"
+
+        console.log(persons[3])
+
+        //como ver a quantidade de itens em um array
+        console.log(persons.length)
+
+        // pode acrescentar objetos dentro do array também. e pode adicionar outros objetos juntos, mas não é uma boa prática
+        const dados = [
+            { name: person1, age: 40 },
+            { name: "Carlos", age: 30 },
+            { name: person3, age: 20 },
+        ]
+
+        console.log(dados[1])
+        console.log(dados[0].name)
+        console.log(dados[0].age)
+
+    </script>
+</html>
