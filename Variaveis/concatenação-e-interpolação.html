@@ -1,0 +1,24 @@
+<html>
+    <script>
+        //concatenar uma string é juntar. ex: concatenar a string "a" com a string "b" vai resultar "ab"
+
+        let name, age
+
+        name = "Matheus"
+        age = 28
+        address = {
+            street: "rua geral",
+            city: "Bahia"
+        }
+
+        console.log("name", name)
+        console.log("age", age)
+        console.log("address", address)
+
+        console.log("Lucas tem 54 anos")
+        //a concatenação pode ser feita das seguintes formas
+        console.log(name + " tem " + age + " anos. E mora em " + address) // concatenação "antiga"
+        console.log(`${name} tem ${age} anos. E mora em ${address}.`)     // interpolação
+        console.log(`${name} tem ${age + 1} anos.`)                       // soma a variável no momento da execução
+    </script>
+</html>

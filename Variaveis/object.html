@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <script>
+
+        const person = {
+            name: "Matheus",
+            age: 27,
+            address: {
+                street: "rua geral",
+                city: "Palhoça"
+            },
+        }
+
+        console.log(person)
+        console.log(JSON.stringify(person))
+
+        console.log(person.name) // imprime o nome. e assim suscetivamente
+
+        console.log(`${person.name} tem ${person.age} anos e mora na cidade de ${person.address.city}.`)
+
+        // alterando 
+
+        person.name = "Antonio"
+
+        // adicionando
+
+        person.hair = "Black"
+
+        console.log(`${person.name} tem ${person.age} anos e mora na cidade de ${person.address.city} e tem o cabelo ${person.hair}.`)
+
+    </script>
+</html>
