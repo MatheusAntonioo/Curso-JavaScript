@@ -1,0 +1,19 @@
+<html>
+    <script>
+
+        let x = 10                   //define o valor e o tipo da variável
+        console.log("x", x)          // mostra ela no scoped global
+
+        {
+            console.log("x", x)      //mostra ela no scoped local
+
+            x = 20                   // altera ela no scoped local
+            
+            let y = 30               // cria uma nova variável no scoped local
+        }
+
+        console.log("x", x)          // alteração feita no scoped local muda a var no scoped global
+
+        console.log("y", y)          // com a variável let, ele não identifica uma variável criada no scoped local, no scoped global
+    </script>
+</html>

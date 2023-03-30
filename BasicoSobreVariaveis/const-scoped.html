@@ -1,0 +1,20 @@
+<html>
+    <script>
+
+        // são definições de variáveis que não pode alterar seus valores
+
+        const x = 10            // constante nao pode iniciar sem um valor. ela precisa ter um inicializador
+        console.log("x", x)
+
+        {
+            console.log("x", x)
+
+           // const x = 20
+            const y = 30        // e quando a constante é criada dentro do scoped local, não pode ser acessada no scoped global
+            console.log("y", y)
+        }
+
+        console.log("x", x)
+       // console.log("y", y)
+    </script>
+</html>
