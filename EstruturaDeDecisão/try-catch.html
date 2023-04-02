@@ -1,0 +1,19 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+
+    try {
+      // executa algo...
+      // consulta de API, banco de dados, arquivos...
+    } catch (error) {
+      // erro
+      alert("Erro de execução genérico. Por favor, fale com o suporte.")
+      console.error(error)
+    } finally {
+      // sempre executa ao final (opcional)
+    }
+    
+    // sempre usar o try em estruturas que precisam ser acessadas externamente. e nunca deixar o catch vazio, sempre adicionar um alerta ou error para que quando retornar throw, nós podermos saber.
+
+  </script>
+</html>

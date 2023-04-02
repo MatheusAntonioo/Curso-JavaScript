@@ -1,0 +1,32 @@
+<html>
+    <meta charset="UTF-8"/>
+    <script>
+        // o if ternário é usado para "if's curtos" como um if para delimitar uma variável
+
+        //variável = (condição) ? IF : ELSE
+
+        let txt = "A"
+        let valor
+
+        // ao invés de fazer
+        /*
+        if (texto == "A") {
+            valor = 10
+        } else {
+            valor = 20
+        }
+        */
+        // fica melhor usando o ternário
+
+        //variável = (condição) ? IF : ELSE
+        valor = txt == "A" ? 10 : 20
+        console.log("valor", valor)
+
+        //execução de comando via ternário
+
+        txt == "A" ? console.log("SE") : console.log("SENÃO")
+
+        // no operador ternário é obrigatório o uso do ELSE ":" se quiser que ele retorne nada tem que por NULL ou UNDEFINED
+
+    </script>
+</html>
