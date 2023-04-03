@@ -1,0 +1,27 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+
+    function mult(n) {
+      let res = n
+      res *= n
+      return res
+    }
+
+    let numVal = 10
+    console.log(mult(numVal))
+    console.log(numVal)
+    // nesse comportamento a variável não altera
+
+    function multObj(obj) {
+      obj.value *= obj.value
+      return obj
+    }
+
+    const numObj = { value: 10 }
+    console.log(multObj(numObj))
+    console.log(numObj)
+    // para variáveis do tipo objeto, essas variáveis sao passadas como referencia. no caso ela altera o objeto
+
+  </script>
+</html>

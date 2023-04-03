@@ -1,0 +1,21 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+
+    function sum() {
+      let res = 0
+
+      for (const n of arguments) {
+        res += n
+      }
+      return res
+    }
+
+    console.log(sum(1, 1, 2, 10, 5, 3))
+    console.log(sum())
+
+    // arguments pega todos os parâmetros sem precisar deixar escrito na função
+    // pois tem funções que os parâmetros são obrigatórios mas em algumas não tem como estipular um parâmetro
+
+  </script>
+</html>
