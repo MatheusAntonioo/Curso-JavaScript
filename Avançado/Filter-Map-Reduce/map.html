@@ -1,0 +1,25 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+    // a função map retorna um array manipulável
+
+    const numbers = [1, 2, 3, 4, 5]
+
+    const double = numbers.map((n) => n * 2) // vai dobrar cada numero dentro do array
+
+    console.log(double)
+
+    const fahrenheit = [0, 32, 45, 46, 47, 91, 93, 121]
+    const celsius = fahrenheit.map((t) => Math.round(((t -32) * 5) / 9))
+    console.log(celsius)
+    
+    const people = [
+      {name: "MathEus", age: 28},
+      {name: "antonio", age: 80},
+      {name: "PEDro", age: 16},
+    ]
+    const peopleNormalized = people.map((p) => p.name.toUpperCase())
+    console.log(peopleNormalized)
+
+  </script>
+</html>

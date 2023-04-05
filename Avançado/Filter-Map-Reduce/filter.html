@@ -1,0 +1,30 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+    // filter filtra valores do array que você queira descartar, esses valores vão ser atribuídos a um novo array/variável que você pode continuar usando
+    const numbers = [10, 18, 1, 15]
+
+    let res = numbers.filter(function (item) {
+      return item > 10
+    }) // na versão "longa"
+
+    console.log(res)
+
+    let res2 = numbers.filter((n) => n > 10) // usando arrow function
+
+    console.log(res2)
+    
+    const people = [
+      {name: "Matheus", gender: "M", age: 28},
+      {name: "Geórgia", gender: "F", age: 20},
+      {name: "Antonio", gender: "M", age: 15},
+    ]
+
+    let res3 = people.filter((p) => p.age >= 18) // filtra o array por objeto
+    console.log(res3)
+
+    let res4 = people.filter((p) => p.age >= 18 && p.gender === "M") // filtrando com mais de um parâmetro
+    console.log(res4)
+
+  </script>
+</html>
