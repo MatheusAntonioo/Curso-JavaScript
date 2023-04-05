@@ -1,0 +1,32 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+
+    let set = [1, 2, 3, 4, 5]
+
+    let [n1, n2] = set // ele vai pegar o primeiro e o segundo objeto do meu array e vai criar uma variável pra cada
+
+    console.log("n1", n1)
+    console.log("n2", n2)
+
+    // esse método é mais usado em funções, para criar uma variável com os objetos dela
+
+    function myFunction() {
+      const x = 10
+      const y = 400
+
+      return [x, y]
+    }
+
+    const myArray = myFunction()
+    console.log(myArray[0])
+    console.log(myArray[1])
+
+    const [x, y] = myFunction()
+    console.log("x", x)
+    console.log("y", y)
+    // o 'x' e o 'y' se tornaram variáveis dentro do código
+
+
+  </script>
+</html>
