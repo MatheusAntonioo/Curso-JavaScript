@@ -1,0 +1,18 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+    // localizando nome, letra ou frase
+    let frase = "Matheus estuda na Estácio"
+
+    console.log(frase.includes("matheus")) // ele nao vai encontrar pois na frase o m é maiúsculo e no parâmetro é minúsculo
+
+    console.log(frase.toLowerCase().includes("matheus")) // usando o lower case ele transforma toda frase em minúsculo e ai sim ele acha o nome
+
+    // substituindo uma palavra our outra
+    console.log(frase.replace("Matheus", "Jonny"))
+
+    let value = 1324.456
+    console.log(value.toFixed(2).replace(".", ",")) // vai mudar o ponto por virgula
+
+  </script>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+    
+    let value = 12345.6789
+
+    console.log(value.toFixed(1)) // essa função pede um argumento para mostrar quantas casas decimais depois da virgula você quer.
+
+    console.log(Math.ceil(value)) // aqui ele imprime o numero inteiro e arredonda para cima
+
+    console.log(Math.floor(value)) // aqui ele imprime o numero inteiro e arredonda para baixo
+
+    console.log(Math.round(value)) // esse método faz igual o .ceil ou o .floor, mas ele arredonda do 0 ate o 4 pra baixo e do 5 ate o 9 pra cima
+
+    console.log(
+      new Intl.NumberFormat("pt-BR", {  // com essa api ele formata o numero em contábil
+        style: "currency",
+        currency: "BRL",
+      }).format(value)
+    )
+    // entrar no site para ler mais sobre essa API
+  </script>
+</html>

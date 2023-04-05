@@ -1,0 +1,27 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+    // "string" <-> Array
+
+    let name = "Matheus"
+
+    console.log(name[0]) // mostra a primeira letra da palavra
+
+    for (const x of name) {
+      console.log(x)             // separa as letras da string 1 por 1
+    }
+
+    console.log(name.length)  // conta quantas letras tem na string
+
+    // agr para transformar um array em string
+
+    let values = [1, 2, 3, 4, 5, 10, 20, 30]
+    console.log(values.join("")) // o método join faz a conversão para string, dentro do argumento você coloca o que quer usar para separar. no caso se deixar sem ele preenche automaticamente com ,
+
+    // para transformar duas strings em array
+
+    let name2 = "Matheus Antonio de Moraes"
+    console.log(name2.split(" ")) // tem que passar o argumento de qual caractere você vai usar para separação
+
+  </script>
+</html>

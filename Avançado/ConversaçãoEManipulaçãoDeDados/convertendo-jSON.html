@@ -1,0 +1,41 @@
+<html>
+  <meta charset="UTF-8"/>
+  <script>
+
+    // JSON - Javascript Object Notation
+    // JSON.stringify()
+    // JSON.parse()
+
+    const people = [
+      {
+        id: 1,
+        name: "Matheus",
+        bornDate: new Date(1995, 5, 18),
+        address: {
+          city: "Palhoça"
+        },
+      },
+      {
+        id: 2,
+        name: "Geórgia",
+        lastName: "Cardoso",
+        bornDate: new Date(2000, 4, 23),
+        address: {
+          city: "São Paulo",
+        },
+      },
+    ]
+
+    console.log(people)
+    
+    console.log(JSON.stringify(people)) //conversão objeto -> string -> JSON
+
+    const json = '[{"id":1,"name":"Matheus","bornDate":"1995-06-18T03:00:00.000Z","address":{"city":"Palhoça"}},{"id":2,"name":"Geórgia","lastName":"Cardoso","bornDate":"2000-05-23T03:00:00.000Z","address":{"city":"São Paulo"}}]' // resultado ta conversão acima
+
+    console.log(JSON.parse(json)) // conversão string / JSON -> objeto
+
+    //usando o json você pode transferir os dados para uma outra linguagem e ela vai conseguir decifra pois o json converte para string
+    // é dessa forma que o back-end conversa com o front-end
+
+  </script>
+</html>
