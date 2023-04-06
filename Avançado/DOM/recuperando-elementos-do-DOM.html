@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Curriculum</title>
+  </head>
+  <body>
+    <img src="perfill.png" width="200"/>
+    <h1 id="person-name" class="title">Seu Nome</h1>
+    <h2 class="title">Programador JavaScript</h2>
+    <p>
+      Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.
+    </p>
+    <p>
+      Para mais detalhes, por favor, visite meu
+      <a href="https://github.com/MatheusAntonioo">Github</a>.
+    </p>
+    <script>
+
+      // Hierarquia do DOM
+      // Document --> Nodes --> Elements --> Attributes
+      
+      // Acessando document
+      console.log(document)
+      console.log(document.body)
+      
+      // Acessando os nós do DOM
+      // document.getElementById()  acessa pelo id
+      const titleEl = document.getElementById("person-name")
+      console.log("TitleEl", titleEl)
+
+      // document.getElementsByTagName()  acessa por uma tag e retorna uma lista/array
+      const titleEl2 = document.getElementsByTagName("h1")
+      console.log("titleEl2", titleEl2)
+
+      // document.getElementsByClassName()  retorna todos os elementos que tenham uma classe, também retorna uma lista
+      const titleEl3 = document.getElementsByClassName("title")
+      console.log("titleEl3", titleEl3)
+
+      // Iterando
+      for (const el of titleEl3) {
+        console.log("el", el)
+      }
+
+      // Jeito mais atual de recuperar um elemento
+      // Ref: http://developer.mozilla.org/en-US/docs/web/CSS/CSS_Selectors
+      // document.querySelector('selector')
+      // document.querySelectorAll('selector')
+      // element.querySelector('selector')
+      // element.querySelectorAll('selector')
+
+      // Selectors
+
+      // Universal: *
+      // Id: #el-id
+      // Tag: <el>
+      // Class: .el-class
+      // Atributos: [attr=value]
+      // Grupos (virgula): el, el
+      // Descendentes (espaço): el el
+      // Child's (>): el > el
+
+      console.log("*", document.querySelectorAll("*"))
+
+      console.log("id", document.querySelector("#person-name"))
+
+      console.log("tag", document.querySelectorAll("p"))
+
+      console.log("class", document.querySelectorAll(".title"))
+
+      console.log("attr", document.querySelectorAll("a[href]"))
+
+    </script>
+  </body>
+</html>

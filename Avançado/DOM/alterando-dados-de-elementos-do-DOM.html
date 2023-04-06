@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Curriculum</title>
+  </head>
+  <body>
+    <img src="perfill.png" width="200"/>
+    <h1 id="person-name" class="title">Seu Nome</h1>
+    <h2 class="title">Programador JavaScript</h2>
+    <p>
+      Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.
+    </p>
+    <p>
+      Para mais detalhes, por favor, visite meu
+      <a href="https://github.com/MatheusAntonioo">Github</a>.
+    </p>
+    <script>
+
+      // Alterando um objeto do DOM
+      // precisa recuperar o elemento e depois alterar
+
+      const titleEl = document.querySelector("#person-name")
+      console.log("titleEl value:", titleEl.innerHTML)
+
+      titleEl.innerHTML = "Matheus Antonio"
+      titleEl.style.color = "red"
+
+      const title2 = document.querySelector("h2")
+      title2.style.color = "blue"
+
+      const txt = document.querySelector("a")
+      txt.style.color = "yellow"
+
+    </script>
+  </body>
+</html>

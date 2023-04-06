@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <script>
+      const el1 = document.getElementById("title") // nesse modelo ele nao identifica pois eu estou chamando o evento antes dele acontecer
+      console.log("el1", el1)
+
+      document.addEventListener("DOMContentLoaded", () => { // aqui ele carrega todo o dom e quando estiver tudo na memoria ele faz a busca
+        const el2 = document.getElementById("title") // pode-se criar uma variável com essas funções e depois so adicionar a variável no parâmetro
+      console.log("el2", el2)
+      })
+    </script>
+    <h1 id="title">Minha página</h1>
+  </body>
+</html>

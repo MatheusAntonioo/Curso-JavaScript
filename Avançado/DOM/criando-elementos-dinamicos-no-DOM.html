@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Curriculum</title>
+  </head>
+  <body>
+    <img src="perfill.png" width="200"/>
+    <h1 id="person-name" class="title">Seu Nome</h1>
+    <h2 class="title">Programador JavaScript</h2>
+    <p>
+      Conhecimento em programação Frontend, Backend para desenvolvimento de sistemas Fullstack.
+    </p>
+    <p>
+      Para mais detalhes, por favor, visite meu
+      <a href="https://github.com/MatheusAntonioo">Github</a>.
+    </p>
+    <!-- <h2>Projetos</h2>
+    <ul>
+      <li>Projeto1</li>
+      <li>Projeto2</li>
+      <li>Projeto3</li>
+    </ul> -->
+    <script>
+
+      // Criando elementos dinamicamente no DOM
+      // Ref.: https://developer.mozilla.org/pt-BR/docs/web/API/Document/createElement
+
+      const subTitleEl = document.createElement("h2")
+      subTitleEl.innerHTML = "Projetos"                // criou o documento na memoria
+      // adicionando
+      document.body.append(subTitleEl)
+
+      //criando a lista
+      const pjListEl = document.createElement("ul")
+
+      const pjListItem1El = document.createElement("li")
+      pjListItem1El.innerHTML = "Projeto 1"
+
+      const pjListItem2El = document.createElement("li")
+      pjListItem2El.innerHTML = "Projeto 2"
+
+      const pjListItem3El = document.createElement("li")
+      pjListItem3El.innerHTML = "Projeto 3"
+
+      pjListEl.append(pjListItem1El)
+      pjListEl.append(pjListItem2El)
+      pjListEl.append(pjListItem3El)
+
+      document.body.append(pjListEl)
+
+    </script>
+  </body>
+</html>
