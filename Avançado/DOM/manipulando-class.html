@@ -18,8 +18,17 @@
       const titleEl = document.querySelector("#title")
 
       const buttonEL = document.querySelector("#change-class")
-      buttonEL.addEventListener("click", () => {})
-      
+      buttonEL.addEventListener("click", () => {
+        // if (titleEl.classList.contains("highlight")) {  // verifica se contem a class
+        //   titleEl.classList.remove("highlight")  // remove a class
+        // } else {
+        //   titleEl.classList.add("highlight") // adiciona a class
+        // }
+
+        titleEl.classList.toggle("highlight")  // faz a mesma função que o if acima
+        buttonEL.classList.toggle("highlight") // se quiser alterar mais de uma classe precisa refazer o processo.
+      })
+
     </script>
   </body>
 </html>
