@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <form action="https://google.com/search" method="get">
+      <label for="q">* Buscar</label>
+      <input type="text" name="q"/>
+
+      <input type="submit" value="Pesquisar"/>
+
+    </form>
+
+    <script>
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+
+      const formEl = document.querySelector("form")
+      formEl.addEventListener("submit", (event) => {
+        const queryText = event.target.querySelector("input[name=q]").value // seleciona o campo de pesquisa e pega o valor que foi digitado
+
+        if (!queryText) {          // valida se o usuário não digitar nada ele não executa 
+          event.preventDefault()
+          alert("O campo busca não pode estar vazio!")
+        }
+
+      })
+    </script>
+  </body>
+</html>
