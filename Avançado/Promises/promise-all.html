@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <button>Executar</button>
+
+  <script>
+    // promise é um objeto usado para processamento assíncrono. uma promise (de "promessa") representa um valor que pode estar disponivel agora, no futuro ou nunca.
+
+    // uma promise está em um destes estados:
+    // pending (pendente): estado inicial, que não foi realizada nem rejeitada.
+    // fulfilled (realizada): sucesso na operação.
+    // rejected (rejeitado): falha na operação.
+
+    function testPromise() {
+      console.log("sync started")
+
+      const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("p1 finished")
+          resolve(1)
+        }, 1000)
+      })
+
+      const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("p2 finished")
+          resolve(2)
+        }, 2000)
+      })
+
+      const p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("p3 finished")
+          reject(3)
+        }, 3000)
+      })
+
+      Promise.all([p1, p2, p3]).then((values) => { // a função .all vai disparar o then ou o catch no final da ultima promise
+        console.log("promises values", values)
+      }).catch(() => {
+        console.error("promises error")
+      })
+
+      console.log("sync finished")
+    }
+
+    const buttonEl = document.querySelector("button")
+    buttonEl.addEventListener("click", testPromise)
+
+  </script> 
+</body>
+</html>
