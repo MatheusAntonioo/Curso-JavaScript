@@ -1,0 +1,54 @@
+<!-- Asynchronous JavaScript And XML (AJAX) é uma tecnologia utilizada para realizar comunicação entre navegador e servidor "sem sair da página". -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <button onclick="loadData()">Recuperar Dados</button>
+    <br/>
+    <br/>
+    <script>
+      const loadData = () => {
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET", "https://api.github.com/users/MatheusAntonioo")
+        xhr.send(null)
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            const res = JSON.parse(xhr.responseText)
+            //console.log(res)
+            const name = res.name
+            const avatarUrl = res.avatar_url
+            const followers = res.followers
+            const blogUrl = res.blog
+            //console.log({name, avatarUrl, followers, blogUrl})
+
+            // <img src="https://avatars.githubusercontent.com/u/129125907?v=4" width="128" />
+            const avatarEl = document.createElement("img")
+            avatarEl.setAttribute("width", "250")
+            avatarEl.setAttribute("src", avatarUrl)
+
+            // <h1>Matheus Antonio</h1>
+            const nameEl = document.createElement("h1")
+            nameEl.innerText = name
+
+            // <p>Followers: 2</p>
+            const followersEl = document.createElement("p")
+            followersEl.innerText = `Followers: ${followers}`
+            
+            // <a>"https://www.linkedin.com/in/matheus-ant%C3%B4nio-196b09239/">LinkedIn</a>
+            const blogEl = document.createElement("a")
+            blogEl.setAttribute("href", `https://${blogUrl}`)
+            blogEl.innerText = blogUrl
+
+            document.body.appendChild(avatarEl)
+            document.body.appendChild(nameEl)
+            document.body.appendChild(followersEl)
+            document.body.appendChild(blogEl)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
