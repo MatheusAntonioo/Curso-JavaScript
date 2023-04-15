@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    const person = {
+      name: "Matheus Antonio",
+      age: 28,
+      address: {
+        street: "Rua dos Tolos",
+        number: "857",
+        complement: "",
+        district: "Centro",
+        city: "Florianópolis",
+        state: "Santa Catarina",
+      },
+    }
+
+    // console.log(typeof person)
+    // console.log(person)
+
+    const personStr = JSON.stringify(person) // transformou o objeto em string
+    // console.log(typeof personStr)
+    // console.log(personStr)
+
+    const personObj = JSON.parse(personStr) // transforma novamente em objeto
+    console.log(personObj)
+    console.log(typeof personObj)
+  </script>
+</body>
